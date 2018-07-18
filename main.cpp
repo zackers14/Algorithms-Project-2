@@ -8,7 +8,7 @@ double** rem (int i, int j, int n, double** m);
 
 int main()
 {
-    ifstream file("smallinput.txt");
+    ifstream file("medinput.txt");
     int n;
     file >> n;
 
@@ -48,10 +48,10 @@ double det(int i, int j, int k, int n, double** m, double* d)
         return d[index];
 
     if (k == 1)
-        return m[0][0];
+        return d[index] = m[0][0];
 
     if (k == 2)
-        return m[0][0]*m[1][1] - m[0][1]*m[1][0];
+        return d[index] = m[0][0]*m[1][1] - m[0][1]*m[1][0];
 
     double** m1 = rem(1,1, k, m);
     double** m2 = rem(k,k, k, m);
